@@ -21,7 +21,12 @@ window.addEventListener('load', () => {
             case 'C':
                 button.addEventListener('click', borrarCalculo);
                 break;
-
+            case '.':
+                button.addEventListener('click', ()=>{
+                    if(display.textContent.includes('.'))return
+                    display.textContent += button.innerHTML
+                });
+                break;
             default:
                 button.addEventListener('click', () => {
                     display.textContent += button.innerHTML
